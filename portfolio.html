@@ -195,6 +195,34 @@
         </div>
 
     </footer>
+    <script>
+        // Get all elements with the class 'fullscreen-trigger'
+        const fullscreenTriggers = document.querySelectorAll('.fullscreen-trigger');
+
+        // Add click event listener to each trigger
+        fullscreenTriggers.forEach((trigger) => {
+            trigger.addEventListener('click', () => {
+                toggleFullScreen(trigger);
+            });
+        });
+
+        function toggleFullScreen(image) {
+            const overlay = document.createElement('div');
+            overlay.classList.add('fullscreen-overlay');
+
+            const fullscreenImage = new Image();
+            fullscreenImage.src = image.src;
+            fullscreenImage.alt = image.alt;
+            fullscreenImage.classList.add('fullscreen-image');
+            overlay.appendChild(fullscreenImage);
+
+            overlay.addEventListener('click', () => {
+                overlay.remove();
+            });
+
+            document.body.appendChild(overlay);
+        }
+    </script>
 </body>
 
 </html>
