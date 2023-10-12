@@ -542,6 +542,7 @@ section {
 footer {
     margin-top: 1rem;
     position: relative;
+    text-align: center;
 }
 
 .navigation ul {
@@ -550,10 +551,8 @@ footer {
 }
 
 .navigation {
-    margin-block: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin-block: 20px;
+
 }
 
 .navigation ul li {
